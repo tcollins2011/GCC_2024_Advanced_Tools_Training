@@ -11,7 +11,12 @@ Welcome to the the advanced tool training! This repository showcases the develop
 
 ## Introduction
 
-Sylph is a program that performs ultrafast (1) ANI querying or (2) metagenomic profiling for metagenomic shotgun samples and is often being used in metagenomic sequencing. As a result the tool was recently wrapped and added to galaxy to allow for users to have access to this new methodology. This repository contains several directoires that show the tool wrapping development of Sylph in different stages and are intended to emphasis the addition of certain advanced tool wrapping concepts. We will explore thse different concepts in our Adavanced Tool training. Below is additional information about this project and how to run it locally. 
+Sylph is a program designed for ultrafast ANI querying and metagenomic profiling of metagenomic shotgun samples, commonly used in metagenomic sequencing. To provide users with easy access to this advanced methodology, Sylph has recently been wrapped and integrated into Galaxy.
+
+This repository includes several directories that document the development stages of the Sylph tool wrapping process. These directories highlight the addition of advanced tool wrapping concepts, which will be explored in our Advanced Tool Training.
+
+Below, you will find additional information about this project and instructions on how to run it locally.
+
 
 ## Installation
 
