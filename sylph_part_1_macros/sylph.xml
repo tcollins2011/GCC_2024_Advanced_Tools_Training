@@ -1,0 +1,50 @@
+<tool id="sylph" name="sylph" version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@">
+    <description>Metagenomic assignments</description>
+    <!-- <expand macro='description'/> -->
+    <!-- <macros>
+       <import>macros.xml</import> 
+    </macros> -->
+    <!-- <expand macro='requirements'/> -->
+    <command detect_errors="exit_code"><![CDATA[
+    ]]></command>
+    <inputs>
+        <!-- <expand macro="input_database"/> -->
+        <conditional name="sketch">
+            <param name="type" type="select" label="Select the type of reads used">
+                <option value="single">Individual single-end reads</option>
+                <option value="single_group">Group of single-ended reads</option>
+                <option value="paired">One set of paired-end reads</option>
+                <option value="paired_group"> Group of paired-ended reads</option>
+            </param>
+            <when value="single">
+                <param name="input" type="data" format="fastq,fastq.gz,fastqsanger,fastqsanger.gz" label="Single-end input reads"/>
+            </when>
+            <when value="single_group">
+                <param name="input" type="data" format="fastq,fastq.gz,fastqsanger,fastqsanger.gz" label="Single-end input reads" multiple="true"/>
+            </when>            
+            <when value="paired">
+                <param name="input_1" type="data" format="fastq,fastq.gz,fastqsanger,fastqsanger.gz" label="Paired-end input reads 1"/>
+                <param name="input_2" type="data" format="fastq,fastq.gz,fastqsanger,fastqsanger.gz" label="Paired-end input reads 2"/>
+            </when>
+            <when value="paired_group">
+                <param name="input" type="data_collection" collection_type="paired" format="fastq,fastq.gz,fastqsanger,fastqsanger.gz" label="Paired-end input reads"/>
+            </when>
+        </conditional>
+        <conditional name="function" >
+            <param name="functions" type="select" label="ANI querying or taxonomic profiling" help="ANI(Average Nucleotide Identity) is a measure of nucleotide-level similarity between the genomes of two microogranisms. Profile querying involves comparing functional or sequence profiles derived from the genomic data.">
+                <option value="profile">Taxanomic Profile</option>
+                <option value="ani">ANI Query</option>
+            </param>
+            <when value="profile">
+                <param name="min_num_kmers" type="integer" value="50" label="Minimum number of k-mers for Sylph to output a result." min="1" help="States the minimum number of k-mers needed for sylph to output a result.This is (approximately) the contig length divided by -c. With default settings, --min-number-kmers 10 can work with contigs ~2500 bp. For smaller contigs, consider -c 100."/>
+            </when>
+            <when value="ani"/>
+        </conditional>
+    </inputs>
+    <outputs>
+        <data format="tabular" name="output" label="${tool.name} on ${on_string}" from_work_dir="output.tsv"/>
+    </outputs>
+    <tests></tests>
+    <help></help>
+    <!-- <expand macro="citation"/> -->
+</tool>

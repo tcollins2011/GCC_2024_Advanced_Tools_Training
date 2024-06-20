@@ -1,0 +1,488 @@
+{
+    "summary": {
+        "num_errors": 0,
+        "num_failures": 0,
+        "num_skips": 0,
+        "num_tests": 5
+    },
+    "tests": [
+        {
+            "data": {
+                "inputs": {
+                    "function|functions": "profile",
+                    "sketch|input": {
+                        "id": "be3266fca2eed557",
+                        "src": "hda"
+                    },
+                    "sketch|type": "single",
+                    "sylph_database": "sylph_db"
+                },
+                "job": {
+                    "command_line": "ln -s '/home/tcollins/tools-iuc/tools/sylph/test-data/sylph_db/database.syldb' 'input.syldb' &&  ln -s '/tmp/tmpynba4_ns/files/d/e/9/dataset_de9af00c-d71f-46e7-a676-0e9a2ab5de39.dat' 'test_single_reads_1.fastq.gz' &&  sylph sketch test_single_reads_1.fastq.gz -t ${GALAXY_SLOTS:-4} -d sylph_sketches &&  sylph profile input.syldb sylph_sketches/*.sylsp --min-number-kmers 50 -t ${GALAXY_SLOTS:-4} -o output.tsv",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2024-06-06T19:38:57.500052",
+                    "dependencies": [],
+                    "exit_code": 0,
+                    "external_id": "933509",
+                    "galaxy_version": "24.0",
+                    "handler": null,
+                    "history_id": "be3266fca2eed557",
+                    "id": "3fcaf26843fe5cc0",
+                    "inputs": {
+                        "sketch|input": {
+                            "id": "be3266fca2eed557",
+                            "src": "hda",
+                            "uuid": "de9af00c-d71f-46e7-a676-0e9a2ab5de39"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "3fcaf26843fe5cc0",
+                            "src": "hda",
+                            "uuid": "2a3cfce0-642e-41e0-821e-5a0a3fec2454"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/tmp/tmpynba4_ns/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "function": "{\"__current_case__\": 0, \"functions\": \"profile\", \"min_num_kmers\": \"50\"}",
+                        "sketch": "{\"__current_case__\": 0, \"input\": {\"values\": [{\"id\": 1, \"src\": \"hda\"}]}, \"type\": \"single\"}",
+                        "sylph_database": "\"sylph_db\""
+                    },
+                    "state": "ok",
+                    "stderr": "2024-06-06T19:38:58.555Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:38:58.564Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:38:58.564Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:38:58.565Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:38:58.565Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:38:58.573Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:38:58.594Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:38:58.594Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:38:58.594Z INFO  [sylph::contain] sylph finished.\n",
+                    "stdout": "",
+                    "tool_id": "sylph",
+                    "tool_stderr": "2024-06-06T19:38:58.555Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:38:58.564Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:38:58.564Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:38:58.565Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:38:58.565Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:38:58.573Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:38:58.594Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:38:58.594Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:38:58.594Z INFO  [sylph::contain] sylph finished.\n",
+                    "tool_stdout": "",
+                    "update_time": "2024-06-06T19:39:01.974997",
+                    "user_email": "planemo@galaxyproject.org"
+                },
+                "status": "success",
+                "test_index": 0,
+                "time_seconds": 11.438855648040771,
+                "tool_id": "sylph",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "sylph-0"
+        },
+        {
+            "data": {
+                "inputs": {
+                    "function|functions": "profile",
+                    "function|min_num_kmers": "49",
+                    "sketch|input": [
+                        {
+                            "id": "92f3ff72b39a8e96",
+                            "src": "hda"
+                        },
+                        {
+                            "id": "e26f0294beda8e20",
+                            "src": "hda"
+                        }
+                    ],
+                    "sketch|type": "single_group",
+                    "sylph_database": "sylph_db"
+                },
+                "job": {
+                    "command_line": "ln -s '/home/tcollins/tools-iuc/tools/sylph/test-data/sylph_db/database.syldb' 'input.syldb' &&  ln -s '/tmp/tmpynba4_ns/files/c/9/6/dataset_c96d895c-d7aa-45ce-9ed2-598aa17673b1.dat' 'test_single_reads_1.fastq.gz' && ln -s '/tmp/tmpynba4_ns/files/c/a/6/dataset_ca6b6099-b639-4b06-b92d-da78cf05e198.dat' 'test_single_reads_2.fastq.gz' &&  sylph sketch -r  test_single_reads_1.fastq.gz test_single_reads_2.fastq.gz -t ${GALAXY_SLOTS:-4} -d sylph_sketches &&  sylph profile input.syldb sylph_sketches/*.sylsp --min-number-kmers 49 -t ${GALAXY_SLOTS:-4} -o output.tsv",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2024-06-06T19:39:09.388055",
+                    "dependencies": [
+                        {
+                            "cacheable": false,
+                            "dependency_resolver": {
+                                "auto_init": true,
+                                "auto_install": true,
+                                "can_uninstall_dependencies": true,
+                                "ensure_channels": "conda-forge,bioconda,defaults",
+                                "model_class": "CondaDependencyResolver",
+                                "prefix": "/home/tcollins/miniconda3",
+                                "read_only": false,
+                                "resolver_type": "conda",
+                                "resolves_simple_dependencies": true,
+                                "use_local": false,
+                                "versionless": false
+                            },
+                            "dependency_type": "conda",
+                            "environment_path": "/home/tcollins/miniconda3/envs/__sylph@0.6.1",
+                            "exact": true,
+                            "model_class": "MergedCondaDependency",
+                            "name": "sylph",
+                            "version": "0.6.1"
+                        }
+                    ],
+                    "exit_code": 0,
+                    "external_id": "933740",
+                    "galaxy_version": "24.0",
+                    "handler": null,
+                    "history_id": "3fcaf26843fe5cc0",
+                    "id": "6f2d698af4c64426",
+                    "inputs": {
+                        "sketch|input": {
+                            "id": "92f3ff72b39a8e96",
+                            "src": "hda",
+                            "uuid": "c96d895c-d7aa-45ce-9ed2-598aa17673b1"
+                        },
+                        "sketch|input1": {
+                            "id": "92f3ff72b39a8e96",
+                            "src": "hda",
+                            "uuid": "c96d895c-d7aa-45ce-9ed2-598aa17673b1"
+                        },
+                        "sketch|input2": {
+                            "id": "e26f0294beda8e20",
+                            "src": "hda",
+                            "uuid": "ca6b6099-b639-4b06-b92d-da78cf05e198"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "6f2d698af4c64426",
+                            "src": "hda",
+                            "uuid": "b5e70e3e-ec34-4586-a133-f3a61d51997a"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/tmp/tmpynba4_ns/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "function": "{\"__current_case__\": 0, \"functions\": \"profile\", \"min_num_kmers\": \"49\"}",
+                        "sketch": "{\"__current_case__\": 1, \"input\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}, {\"id\": 4, \"src\": \"hda\"}]}, \"type\": \"single_group\"}",
+                        "sylph_database": "\"sylph_db\""
+                    },
+                    "state": "ok",
+                    "stderr": "2024-06-06T19:39:09.740Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:39:09.748Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:39:09.757Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_2.fastq.gz.sylsp complete.\n2024-06-06T19:39:09.757Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:09.758Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:09.758Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:09.767Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:09.786Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:09.786Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:39:09.794Z INFO  [sylph::contain] sylph_sketches/test_single_reads_2.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:09.814Z INFO  [sylph::contain] sylph_sketches/test_single_reads_2.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:09.814Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_2.fastq.gz.sylsp.\n2024-06-06T19:39:09.814Z INFO  [sylph::contain] sylph finished.\n",
+                    "stdout": "",
+                    "tool_id": "sylph",
+                    "tool_stderr": "2024-06-06T19:39:09.740Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:39:09.748Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:39:09.757Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_2.fastq.gz.sylsp complete.\n2024-06-06T19:39:09.757Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:09.758Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:09.758Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:09.767Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:09.786Z INFO  [sylph::contain] sylph_sketches/test_single_reads_1.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:09.786Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:39:09.794Z INFO  [sylph::contain] sylph_sketches/test_single_reads_2.fastq.gz.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:09.814Z INFO  [sylph::contain] sylph_sketches/test_single_reads_2.fastq.gz.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:09.814Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_2.fastq.gz.sylsp.\n2024-06-06T19:39:09.814Z INFO  [sylph::contain] sylph finished.\n",
+                    "tool_stdout": "",
+                    "update_time": "2024-06-06T19:39:13.243960",
+                    "user_email": "planemo@galaxyproject.org"
+                },
+                "status": "success",
+                "test_index": 1,
+                "time_seconds": 11.306097030639648,
+                "tool_id": "sylph",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "sylph-1"
+        },
+        {
+            "data": {
+                "inputs": {
+                    "function|functions": "profile",
+                    "sketch|input_1": {
+                        "id": "d8671809c5427b95",
+                        "src": "hda"
+                    },
+                    "sketch|input_2": {
+                        "id": "53cbd646d1aca4f7",
+                        "src": "hda"
+                    },
+                    "sketch|type": "paired",
+                    "sylph_database": "sylph_db"
+                },
+                "job": {
+                    "command_line": "ln -s '/home/tcollins/tools-iuc/tools/sylph/test-data/sylph_db/database.syldb' 'input.syldb' &&     ln -s '/tmp/tmpynba4_ns/files/e/2/f/dataset_e2ffd144-b36a-4590-9188-22b8df0cb492.dat' 'test_R1.fq.fastq' && ln -s '/tmp/tmpynba4_ns/files/5/9/1/dataset_591d60b7-d969-4a2b-8158-83df755e830c.dat' 'test_R2.fq.fastq' &&  sylph sketch -1 test_R1.fq.fastq -2 test_R2.fq.fastq -t ${GALAXY_SLOTS:-4} -d sylph_sketches &&  sylph profile input.syldb sylph_sketches/*.sylsp --min-number-kmers 50 -t ${GALAXY_SLOTS:-4} -o output.tsv",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2024-06-06T19:39:21.289211",
+                    "dependencies": [
+                        {
+                            "cacheable": false,
+                            "dependency_resolver": {
+                                "auto_init": true,
+                                "auto_install": true,
+                                "can_uninstall_dependencies": true,
+                                "ensure_channels": "conda-forge,bioconda,defaults",
+                                "model_class": "CondaDependencyResolver",
+                                "prefix": "/home/tcollins/miniconda3",
+                                "read_only": false,
+                                "resolver_type": "conda",
+                                "resolves_simple_dependencies": true,
+                                "use_local": false,
+                                "versionless": false
+                            },
+                            "dependency_type": "conda",
+                            "environment_path": "/home/tcollins/miniconda3/envs/__sylph@0.6.1",
+                            "exact": true,
+                            "model_class": "MergedCondaDependency",
+                            "name": "sylph",
+                            "version": "0.6.1"
+                        }
+                    ],
+                    "exit_code": 0,
+                    "external_id": "934014",
+                    "galaxy_version": "24.0",
+                    "handler": null,
+                    "history_id": "92f3ff72b39a8e96",
+                    "id": "eddf278751e6d8a7",
+                    "inputs": {
+                        "sketch|input_1": {
+                            "id": "d8671809c5427b95",
+                            "src": "hda",
+                            "uuid": "e2ffd144-b36a-4590-9188-22b8df0cb492"
+                        },
+                        "sketch|input_2": {
+                            "id": "53cbd646d1aca4f7",
+                            "src": "hda",
+                            "uuid": "591d60b7-d969-4a2b-8158-83df755e830c"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "eddf278751e6d8a7",
+                            "src": "hda",
+                            "uuid": "1022ca18-1e9e-4bc6-8264-d37fc21106d2"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/tmp/tmpynba4_ns/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "function": "{\"__current_case__\": 0, \"functions\": \"profile\", \"min_num_kmers\": \"50\"}",
+                        "sketch": "{\"__current_case__\": 2, \"input_1\": {\"values\": [{\"id\": 6, \"src\": \"hda\"}]}, \"input_2\": {\"values\": [{\"id\": 7, \"src\": \"hda\"}]}, \"type\": \"paired\"}",
+                        "sylph_database": "\"sylph_db\""
+                    },
+                    "state": "ok",
+                    "stderr": "2024-06-06T19:39:22.008Z INFO  [sylph::sketch] Sketching paired sequences...\n2024-06-06T19:39:22.013Z INFO  [sylph::sketch] Sketching sylph_sketches/test_R1.fq.fastq.paired.sylsp complete.\n2024-06-06T19:39:22.013Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:22.014Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:22.015Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:22.019Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:22.024Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:22.024Z INFO  [sylph::contain] Finished sample sylph_sketches/test_R1.fq.fastq.paired.sylsp.\n2024-06-06T19:39:22.024Z INFO  [sylph::contain] sylph finished.\n",
+                    "stdout": "",
+                    "tool_id": "sylph",
+                    "tool_stderr": "2024-06-06T19:39:22.008Z INFO  [sylph::sketch] Sketching paired sequences...\n2024-06-06T19:39:22.013Z INFO  [sylph::sketch] Sketching sylph_sketches/test_R1.fq.fastq.paired.sylsp complete.\n2024-06-06T19:39:22.013Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:22.014Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:22.015Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:22.019Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:22.024Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:22.024Z INFO  [sylph::contain] Finished sample sylph_sketches/test_R1.fq.fastq.paired.sylsp.\n2024-06-06T19:39:22.024Z INFO  [sylph::contain] sylph finished.\n",
+                    "tool_stdout": "",
+                    "update_time": "2024-06-06T19:39:25.412327",
+                    "user_email": "planemo@galaxyproject.org"
+                },
+                "status": "success",
+                "test_index": 2,
+                "time_seconds": 12.10990858078003,
+                "tool_id": "sylph",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "sylph-2"
+        },
+        {
+            "data": {
+                "inputs": {
+                    "function|functions": "profile",
+                    "sketch|input_1": {
+                        "id": "f440676619bc4837",
+                        "src": "hda"
+                    },
+                    "sketch|input_2": {
+                        "id": "8abb9296ce8025a6",
+                        "src": "hda"
+                    },
+                    "sketch|type": "paired",
+                    "sylph_database": "sylph_db"
+                },
+                "job": {
+                    "command_line": "ln -s '/home/tcollins/tools-iuc/tools/sylph/test-data/sylph_db/database.syldb' 'input.syldb' &&     ln -s '/tmp/tmpynba4_ns/files/4/9/f/dataset_49f2bd75-b6a4-4da5-9c86-93f6260925e3.dat' 'test_R1.fq.fastq' && ln -s '/tmp/tmpynba4_ns/files/b/c/b/dataset_bcb39931-5b53-4712-af3b-fb47902d6b2a.dat' 'test_R2.fq.fastq' &&  sylph sketch -1 test_R1.fq.fastq -2 test_R2.fq.fastq -t ${GALAXY_SLOTS:-4} -d sylph_sketches &&  sylph profile input.syldb sylph_sketches/*.sylsp --min-number-kmers 50 -t ${GALAXY_SLOTS:-4} -o output.tsv",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2024-06-06T19:39:33.450731",
+                    "dependencies": [
+                        {
+                            "cacheable": false,
+                            "dependency_resolver": {
+                                "auto_init": true,
+                                "auto_install": true,
+                                "can_uninstall_dependencies": true,
+                                "ensure_channels": "conda-forge,bioconda,defaults",
+                                "model_class": "CondaDependencyResolver",
+                                "prefix": "/home/tcollins/miniconda3",
+                                "read_only": false,
+                                "resolver_type": "conda",
+                                "resolves_simple_dependencies": true,
+                                "use_local": false,
+                                "versionless": false
+                            },
+                            "dependency_type": "conda",
+                            "environment_path": "/home/tcollins/miniconda3/envs/__sylph@0.6.1",
+                            "exact": true,
+                            "model_class": "MergedCondaDependency",
+                            "name": "sylph",
+                            "version": "0.6.1"
+                        }
+                    ],
+                    "exit_code": 0,
+                    "external_id": "934256",
+                    "galaxy_version": "24.0",
+                    "handler": null,
+                    "history_id": "e26f0294beda8e20",
+                    "id": "eac376eb70d48714",
+                    "inputs": {
+                        "sketch|input_1": {
+                            "id": "f440676619bc4837",
+                            "src": "hda",
+                            "uuid": "49f2bd75-b6a4-4da5-9c86-93f6260925e3"
+                        },
+                        "sketch|input_2": {
+                            "id": "8abb9296ce8025a6",
+                            "src": "hda",
+                            "uuid": "bcb39931-5b53-4712-af3b-fb47902d6b2a"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "eac376eb70d48714",
+                            "src": "hda",
+                            "uuid": "d485ccd9-2c85-4ef5-b5ea-8d52fcbb21c6"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/tmp/tmpynba4_ns/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "function": "{\"__current_case__\": 0, \"functions\": \"profile\", \"min_num_kmers\": \"50\"}",
+                        "sketch": "{\"__current_case__\": 2, \"input_1\": {\"values\": [{\"id\": 9, \"src\": \"hda\"}]}, \"input_2\": {\"values\": [{\"id\": 10, \"src\": \"hda\"}]}, \"type\": \"paired\"}",
+                        "sylph_database": "\"sylph_db\""
+                    },
+                    "state": "ok",
+                    "stderr": "2024-06-06T19:39:34.258Z INFO  [sylph::sketch] Sketching paired sequences...\n2024-06-06T19:39:34.264Z INFO  [sylph::sketch] Sketching sylph_sketches/test_R1.fq.fastq.paired.sylsp complete.\n2024-06-06T19:39:34.264Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:34.265Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:34.265Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:34.269Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:34.274Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:34.274Z INFO  [sylph::contain] Finished sample sylph_sketches/test_R1.fq.fastq.paired.sylsp.\n2024-06-06T19:39:34.274Z INFO  [sylph::contain] sylph finished.\n",
+                    "stdout": "",
+                    "tool_id": "sylph",
+                    "tool_stderr": "2024-06-06T19:39:34.258Z INFO  [sylph::sketch] Sketching paired sequences...\n2024-06-06T19:39:34.264Z INFO  [sylph::sketch] Sketching sylph_sketches/test_R1.fq.fastq.paired.sylsp complete.\n2024-06-06T19:39:34.264Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:34.265Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:34.265Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:34.269Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp taxonomic profiling; reassigning k-mers for 1 genomes...\n2024-06-06T19:39:34.274Z INFO  [sylph::contain] sylph_sketches/test_R1.fq.fastq.paired.sylsp has 1 genomes passing profiling threshold. \n2024-06-06T19:39:34.274Z INFO  [sylph::contain] Finished sample sylph_sketches/test_R1.fq.fastq.paired.sylsp.\n2024-06-06T19:39:34.274Z INFO  [sylph::contain] sylph finished.\n",
+                    "tool_stdout": "",
+                    "update_time": "2024-06-06T19:39:37.686270",
+                    "user_email": "planemo@galaxyproject.org"
+                },
+                "status": "success",
+                "test_index": 3,
+                "time_seconds": 12.035053730010986,
+                "tool_id": "sylph",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "sylph-3"
+        },
+        {
+            "data": {
+                "inputs": {
+                    "function|functions": "ani",
+                    "sketch|input": {
+                        "id": "12ddeecfc4d16ce5",
+                        "src": "hda"
+                    },
+                    "sketch|type": "single",
+                    "sylph_database": "sylph_db"
+                },
+                "job": {
+                    "command_line": "ln -s '/home/tcollins/tools-iuc/tools/sylph/test-data/sylph_db/database.syldb' 'input.syldb' &&  ln -s '/tmp/tmpynba4_ns/files/2/2/0/dataset_220135d0-f8ae-4150-8387-02b46f894de3.dat' 'test_single_reads_1.fastq.gz' &&  sylph sketch test_single_reads_1.fastq.gz -t ${GALAXY_SLOTS:-4} -d sylph_sketches &&  sylph query -t ${GALAXY_SLOTS:-4} input.syldb sylph_sketches/*.sylsp -o output.tsv",
+                    "command_version": "",
+                    "copied_from_job_id": null,
+                    "create_time": "2024-06-06T19:39:44.428988",
+                    "dependencies": [
+                        {
+                            "cacheable": false,
+                            "dependency_resolver": {
+                                "auto_init": true,
+                                "auto_install": true,
+                                "can_uninstall_dependencies": true,
+                                "ensure_channels": "conda-forge,bioconda,defaults",
+                                "model_class": "CondaDependencyResolver",
+                                "prefix": "/home/tcollins/miniconda3",
+                                "read_only": false,
+                                "resolver_type": "conda",
+                                "resolves_simple_dependencies": true,
+                                "use_local": false,
+                                "versionless": false
+                            },
+                            "dependency_type": "conda",
+                            "environment_path": "/home/tcollins/miniconda3/envs/__sylph@0.6.1",
+                            "exact": true,
+                            "model_class": "MergedCondaDependency",
+                            "name": "sylph",
+                            "version": "0.6.1"
+                        }
+                    ],
+                    "exit_code": 0,
+                    "external_id": "934422",
+                    "galaxy_version": "24.0",
+                    "handler": null,
+                    "history_id": "6f2d698af4c64426",
+                    "id": "aba2bf9f8c2d6658",
+                    "inputs": {
+                        "sketch|input": {
+                            "id": "12ddeecfc4d16ce5",
+                            "src": "hda",
+                            "uuid": "220135d0-f8ae-4150-8387-02b46f894de3"
+                        }
+                    },
+                    "job_messages": [],
+                    "job_metrics": [],
+                    "job_runner_name": null,
+                    "job_stderr": "",
+                    "job_stdout": "",
+                    "model_class": "Job",
+                    "output_collections": {},
+                    "outputs": {
+                        "output": {
+                            "id": "aba2bf9f8c2d6658",
+                            "src": "hda",
+                            "uuid": "d6c10cd3-8c7b-423e-8500-9763cd4a542e"
+                        }
+                    },
+                    "params": {
+                        "__input_ext": "\"input\"",
+                        "chromInfo": "\"/tmp/tmpynba4_ns/galaxy-dev/tool-data/shared/ucsc/chrom/?.len\"",
+                        "dbkey": "\"?\"",
+                        "function": "{\"__current_case__\": 1, \"functions\": \"ani\"}",
+                        "sketch": "{\"__current_case__\": 0, \"input\": {\"values\": [{\"id\": 12, \"src\": \"hda\"}]}, \"type\": \"single\"}",
+                        "sylph_database": "\"sylph_db\""
+                    },
+                    "state": "ok",
+                    "stderr": "2024-06-06T19:39:45.410Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:39:45.418Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:39:45.418Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:45.419Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:45.419Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:45.427Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:39:45.427Z INFO  [sylph::contain] sylph finished.\n",
+                    "stdout": "",
+                    "tool_id": "sylph",
+                    "tool_stderr": "2024-06-06T19:39:45.410Z INFO  [sylph::sketch] Sketching non-paired sequences...\n2024-06-06T19:39:45.418Z INFO  [sylph::sketch] Sketching sylph_sketches/test_single_reads_1.fastq.gz.sylsp complete.\n2024-06-06T19:39:45.418Z INFO  [sylph::sketch] Finished.\n2024-06-06T19:39:45.419Z INFO  [sylph::contain] Obtaining sketches...\n2024-06-06T19:39:45.419Z INFO  [sylph::contain] Finished obtaining genome sketches.\n2024-06-06T19:39:45.427Z INFO  [sylph::contain] Finished sample sylph_sketches/test_single_reads_1.fastq.gz.sylsp.\n2024-06-06T19:39:45.427Z INFO  [sylph::contain] sylph finished.\n",
+                    "tool_stdout": "",
+                    "update_time": "2024-06-06T19:39:48.773339",
+                    "user_email": "planemo@galaxyproject.org"
+                },
+                "status": "success",
+                "test_index": 4,
+                "time_seconds": 11.17809772491455,
+                "tool_id": "sylph",
+                "tool_version": "0.1.0+galaxy0"
+            },
+            "has_data": true,
+            "id": "sylph-4"
+        }
+    ],
+    "version": "0.1"
+}
