@@ -7,9 +7,9 @@
             <requirement type="package" version="@VERSION@">sylph</requirement>
         </requirements>
     </xml>
-    <xml name="description">
+    <!-- <xml name="description">
         <description>Metagenomic assignments</description>
-    </xml>
+    </xml> -->
     <xml name="citation">
         <citations>
             <citation type="doi">10.1101/2023.11.20.567879</citation>
