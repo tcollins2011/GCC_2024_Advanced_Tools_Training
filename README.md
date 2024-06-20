@@ -6,15 +6,13 @@ Welcome to the the advanced tool training! This repository showcases the develop
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Development Stages](#development-stages)
-- [Galaxy Tool Wrapping](#galaxy-tool-wrapping)
 - [License](#license)
 - [Contact](#contact)
 
 ## Introduction
 
-Sylph is a program that performs ultrafast (1) ANI querying or (2) metagenomic profiling for metagenomic shotgun samples. This repository documents its development stages and provides comprehensive training materials for wrapping the tool in Galaxy.
+Sylph is a program that performs ultrafast (1) ANI querying or (2) metagenomic profiling for metagenomic shotgun samples and is often being used in metagenomic sequencing. As a result the tool was recently wrapped and added to galaxy to allow for users to have access to this new methodology. This repository contains several directoires that show the tool wrapping development of Sylph in different stages and are intended to emphasis the addition of certain advanced tool wrapping concepts. We will explore thse different concepts in our Adavanced Tool training. Below is additional information about this project and how to run it locally. 
 
 ## Installation
 
@@ -28,9 +26,21 @@ Sylph is a program that performs ultrafast (1) ANI querying or (2) metagenomic p
 
 ```bash
 git clone https://github.com/tcollins2011/GCC_2024_Advanced_Tools_Training.git
-cd sylph
+cd GCC_2024_Advanced_Tools_Training
 ```
+
+### Installing Planemo
+
+```bash
+python3 -m venv venv
+source venv/bin/activate 
+
+pip install planemo
+```
+
+
 ## License 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
 
 ## Contact 
 For questions or suggestions, please open an issue or contact the project maintainer at tcolli32@jhu.edu.
