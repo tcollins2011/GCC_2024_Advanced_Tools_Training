@@ -36,12 +36,11 @@ cd GCC_2024_Advanced_Tools_Training
 ### Installing Planemo
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate 
+python3 -m venv .venv
+source .venv/bin/activate 
 
-pip install planemo
+pip3 install planemo
 ```
-
 
 ## License 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
