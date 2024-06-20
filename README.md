@@ -6,7 +6,6 @@ Welcome to the the advanced tool training! This repository showcases the develop
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Development Stages](#development-stages)
 - [License](#license)
 - [Contact](#contact)
 
