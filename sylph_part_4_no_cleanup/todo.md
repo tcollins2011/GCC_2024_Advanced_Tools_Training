@@ -1,0 +1,1 @@
+In this section we will be running the tool with palnemo. However, we will add the no cleanup flag and show you how to access the galaxy working directory.
