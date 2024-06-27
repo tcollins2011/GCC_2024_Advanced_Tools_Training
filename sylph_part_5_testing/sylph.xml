@@ -175,71 +175,9 @@
     <outputs>
         <data format="tabular" name="output" label="${tool.name} on ${on_string}" from_work_dir="output.tsv"/>
     </outputs>
-    <tests>
-        <!-- Test 1 Individual Single-end Inputs and Taxonamy-->
-        <test expect_num_outputs="1">
-            <param name="sylph_database" value="sylph_db"/>
-            <conditional name="sketch">
-                <param name="type" value="single"/>
-                <param name="input" ftype="fastq" value="test_single_reads_1.fastq.gz"/>
-            </conditional>
-            <conditional name="function">
-                <param name="functions" value="profile"/>
-            </conditional>
-            <output name="output" value="output_1.tabular"/>
-        </test>
-        <!--Test 2  Group of Single-end Inputs-->
-        <test expect_num_outputs="1">
-            <param name="sylph_database" value="sylph_db"/>
-            <conditional name="sketch">
-                <param name="type" value="single_group"/>
-                <param name="input" ftype="fastq" value="test_single_reads_1.fastq.gz,test_single_reads_2.fastq.gz"/>
-            </conditional>
-            <conditional name="function">
-                <param name="functions" value="profile"/>
-                <param name="min_num_kmers" value="49"/>
-            </conditional>
-            <output name="output" value="output_2.tabular"/>
-        </test>
-        <!-- Test 3 Paired-end reads -->
-        <test expect_num_outputs="1">
-            <param name="sylph_database" value="sylph_db"/>
-            <conditional name="sketch">
-                <param name="type" value="paired"/>
-                <param name="input_1" value="test_R1.fq" ftype="fastq"/>
-                <param name="input_2" value="test_R2.fq" ftype="fastqsanger"/>
-            </conditional>
-            <conditional name="function">
-                <param name="functions" value="profile"/>
-            </conditional>
-            <output name="output" value="output_3.tabular"/>
-        </test>
-        <!-- Test 4 Collection of Paired-end Reads -->
-        <test expect_num_outputs="1">
-            <param name="sylph_database" value="sylph_db"/>
-            <conditional name="sketch">
-                <param name="type" value="paired"/>
-                <param name="input_1" ftype="fastq" value="test_R1.fq"/>
-                <param name="input_2" ftype="fastq" value="test_R2.fq"/>
-            </conditional>
-            <conditional name="function">
-                <param name="functions" value="profile"/>
-            </conditional>
-            <output name="output" value="output_4.tabular"/>
-        </test>
-        <!-- Test 5 Single-end Read ANI -->
-        <test expect_num_outputs="1">
-            <param name="sylph_database" value="sylph_db"/>
-            <conditional name="sketch">
-                <param name="type" value="single"/>
-                <param name="input" ftype="fastq" value="test_single_reads_1.fastq.gz"/>
-            </conditional>
-            <conditional name="function">
-                <param name="functions" value="ani"/>
-            </conditional>
-            <output name="output" value="output_5.tabular"/>
-        </test>
-    </tests>
+    <!-- Lets fill out some tests -->
+    <tests   
+    ></tests>
     <help><![CDATA[
 **What is sylph?**
 

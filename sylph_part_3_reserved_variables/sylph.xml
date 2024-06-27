@@ -113,7 +113,7 @@
             -1 $read1
             -2 $read2
         #end if
-        -t \${GALAXY_SLOTS:-4}
+        ## Demonstrate threads here
         -d sylph_sketches &&
 
 ##OPTION FOR PROFILE
